@@ -13,10 +13,10 @@
 
 :root {
   --app-background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url("https://cdn.discordapp.com/attachments/1377408587319738510/1378346380761895002/7e0b7d2a01b77f99f1eebc80f0b63ff78fd6bf2b60d9a5197133bca55c4391b2_1.png?ex=683c4499&is=683af319&hm=2ffa590565cae87f9ac78294d3cb22143ceb70bc17d121da7b69871eb6142bad&");
+    url("https://imgur.com/a/7OQqUvS.jpg");
 
   --profile-background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url("https://cdn.discordapp.com/attachments/1377408587319738510/1378346380761895002/7e0b7d2a01b77f99f1eebc80f0b63ff78fd6bf2b60d9a5197133bca55c4391b2_1.png?ex=683c4499&is=683af319&hm=2ffa590565cae87f9ac78294d3cb22143ceb70bc17d121da7b69871eb6142bad&");
+    url("https://imgur.com/a/7OQqUvS.jpg");
   --main-color: #993753; /* main color (used mostly in buttons) [default: #992727] */
   --main-color-selected: #d86182; /* [default: #aa2f2f] */
   --main-color-semitransparent: #fb4e7f; /* [default: #d4393926] */
