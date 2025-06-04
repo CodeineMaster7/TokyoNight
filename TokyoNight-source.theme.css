@@ -1022,23 +1022,14 @@ nav[class*=container] > [class*=container] > header:hover {
   border-radius: 10px;
 }
 
-/* Скрываем панель активности (Active Now) на правой стороне */
-.scroller__7d20c.thin_d125d2.scrollerBase_d125d2 {
+.panels-3wFtMD > .activityPanel-28dQGo {
   width: 0 !important;
-  min-width: 0 !important;
-  max-width: 0 !important;
-  opacity: 0 !important;
   overflow: hidden !important;
-  transition: all 0.3s ease;
+  transition: width 0.25s ease;
 }
 
-/* Показываем при наведении на край — на всю правую часть wrapper или parent */
-.container__7e23c:hover .scroller__7d20c.thin_d125d2.scrollerBase_d125d2 {
-  width: 240px !important;
-  min-width: 240px !important;
-  max-width: 240px !important;
-  opacity: 1 !important;
-  overflow: auto !important;
+.panels-3wFtMD:hover > .activityPanel-28dQGo {
+  width: 260px !important;
 }
 
 
