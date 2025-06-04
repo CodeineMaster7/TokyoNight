@@ -1022,21 +1022,9 @@ nav[class*=container] > [class*=container] > header:hover {
   border-radius: 10px;
 }
 
-/* === 1) Скрываем секцию «Active Now» из-за высоты (max-height: 0) === */
-[class*="scrollerBase_"] {
-  max-height: 0 !important;       /* «свернём» блок, чтобы он не занимал места */
-  overflow: hidden !important;    /* спрячем всё, что внутри */
-  transition: max-height 0.25s ease; /* плавная анимация разворачивания */
-  pointer-events: none;           /* чтобы при свёрнутом состоянии курсор проходил сквозь */
-}
-
-/* === 2) При наведении на родительский контейнер — «разворачиваем» Active Now === */
-[class*="panels-"]:hover > [class*="scrollerBase_"] {
-  max-height: 1000px !important;  /* выставляем большую «максимальную высоту» для разворачивания */
-  pointer-events: auto;           /* вновь возвращаем возможность «зацепиться» мышью */
-}
-
-
+div[class^="panels-"]:hover > div[class*="activityPanel-"] { width: 260px !important; }
+div[class^="panels-"] > div[class*="activityPanel-"],
+div[class^="panels-"] > div > div[class*="activityPanel-"]
 
 [class*=panels] > [class*=activityPanel], [class*=panels] > [class*=container] {
   border: 0;
