@@ -1021,6 +1021,17 @@ nav[class*=container] > [class*=container] > header:hover {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
+[class*=panels] > [class*=activityPanel], [class*=panels] > [class*=container] {
+  border: 0;
+  width: 0 !important;           /* убираем ширину панели */
+  overflow: hidden !important;   /* скрываем содержимое */
+  transition: width 0.25s ease;  /* анимация разворачивания */
+}
+[class*=panels] > [class*=activityPanel] button:hover, [class*=panels] > [class*=container] button:hover {
+  background: rgba(0, 0, 0, 0.2) !important;
+  width: 260px !important;       /* пример: 260px — задайте ту ширину, которая вам нужна */
+}
+
 [class*=panels] > [class*=wrapper] > [class*=container] {
   border: 0;
 }
@@ -2200,16 +2211,4 @@ div[class^=notice] button:hover {
   color: rgba(255, 255, 255, 0.3);
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-/* 1) Скрываем панель активностей по умолчанию */
-[class*=panels] > [class*=activityPanel] {
-  width: 0 !important;           /* убираем ширину панели */
-  overflow: hidden !important;   /* скрываем содержимое */
-  transition: width 0.25s ease;  /* анимация разворачивания */
-}
-
-/* 2) При наведении на правый край контейнера panels «вытягиваем» панель на нужную ширину */
-[class*=panels]:hover > [class*=activityPanel] {
-  width: 260px !important;       /* пример: 260px — задайте ту ширину, которая вам нужна */
 }
