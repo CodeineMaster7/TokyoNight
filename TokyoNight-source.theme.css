@@ -1023,15 +1023,11 @@ nav[class*=container] > [class*=container] > header:hover {
 }
 [class*=panels] > [class*=activityPanel], [class*=panels] > [class*=container] {
   border: 0;
-  width: 0 !important;           /* убираем ширину панели */
-  overflow: hidden !important;   /* скрываем содержимое */
-  transition: width 0.25s ease;  /* анимация разворачивания */
+  width: 10px;
 }
 [class*=panels] > [class*=activityPanel] button:hover, [class*=panels] > [class*=container] button:hover {
   background: rgba(0, 0, 0, 0.2) !important;
-  width: 260px !important;       /* пример: 260px — задайте ту ширину, которая вам нужна */
 }
-
 [class*=panels] > [class*=wrapper] > [class*=container] {
   border: 0;
 }
@@ -2211,35 +2207,4 @@ div[class^=notice] button:hover {
   color: rgba(255, 255, 255, 0.3);
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-/* Переключатель панели активности */
-#toggle-activity-panel {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  z-index: 9999;
-  background: var(--main-color);
-  color: var(--button-text);
-  padding: 5px 8px;
-  border-radius: 8px 0 0 8px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-/* Скрытая панель активности */
-.activity-hidden [class^="nowPlayingSidebar_"] {
-  display: none !important;
-}
-
-
-/* При наведении показывать панель */
-[class^="nowPlayingSidebar_"] {
-  transition: transform 0.3s ease;
-  transform: translateX(0);
-}
-
-body.activity-hidden [class^="nowPlayingSidebar_"] {
-  transform: translateX(100%);
-  pointer-events: none;
 }
