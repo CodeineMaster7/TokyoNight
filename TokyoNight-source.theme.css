@@ -1022,9 +1022,50 @@ nav[class*=container] > [class*=container] > header:hover {
   border-radius: 10px;
 }
 
-div[class^="panels-"]:hover > div[class*="activityPanel-"] { width: 260px !important; }
+/* ==============================
+   Спрятать правую activity-панель
+   ============================== */
+
+/* 1) «Жёсткое» скрытие самой панели по разным возможным вариантам селекторов */
+
+/* Вариант A: panels->activityPanel */
 div[class^="panels-"] > div[class*="activityPanel-"],
-div[class^="panels-"] > div > div[class*="activityPanel-"]
+div[class*="panels-"] > div[class*="activityPanel-"] {
+  width: 0 !important;
+  overflow: hidden !important;
+  transition: width 0.25s ease;
+}
+
+/* Вариант B: panels->wrapper->activityPanel (если между панелями оказался ещё один <div>) */
+div[class^="panels-"] > div > div[class*="activityPanel-"],
+div[class*="panels-"] > div > div[class*="activityPanel-"] {
+  width: 0 !important;
+  overflow: hidden !important;
+  transition: width 0.25s ease;
+}
+
+/* 2) При наведении на всю область panels (включая невидимую «узкую» часть) — вернуть ширину */
+div[class^="panels-"]:hover > div[class*="activityPanel-"],
+div[class*="panels-"]:hover > div > div[class*="activityPanel-"],
+div[class*="panels-"]:hover > div[class*="activityPanel-"],
+div[class*="panels-"]:hover > div > div[class*="activityPanel-"] {
+  width: 260px !important;   /* ← здесь 260px — пример, можно подогнать на ваш вкус */
+}
+
+/* 3) Если вдруг дисплей контейнера panels не flex’овый и панель «не сворачивается», принудим flex */
+div[class^="panels-"], 
+div[class*="panels-"] {
+  display: flex !important;
+}
+
+/* ==============================
+   (опционально) Убирать любую обводку/бордер, чтобы место выглядело ровнее
+   ============================== */
+div[class^="panels-"] > div[class*="activityPanel-"],
+div[class*="panels-"] > div > div[class*="activityPanel-"] {
+  border: 0 !important;
+}
+
 
 [class*=panels] > [class*=activityPanel], [class*=panels] > [class*=container] {
   border: 0;
