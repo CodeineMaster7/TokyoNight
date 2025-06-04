@@ -17,13 +17,13 @@
 
   --profile-background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url("https://i.postimg.cc/bvcJKxJk/7e0b7d2a01b77f99f1eebc80f0b63ff78fd6bf2b60d9a5197133bca55c4391b2-1.png");
-  --main-color: #519b24; /* main color (used mostly in buttons) [default: #992727] */
-  --main-color-selected: #149416; /* [default: #aa2f2f] */
-  --main-color-semitransparent: #289ea0; /* [default: #d4393926] */
-  --main-color-semitransparent-selected: #18a463; /* [default: #d336364d] */
+  --main-color: #993753; /* main color (used mostly in buttons) [default: #992727] */
+  --main-color-selected: #d86182; /* [default: #aa2f2f] */
+  --main-color-semitransparent: #fb4e7f; /* [default: #d4393926] */
+  --main-color-semitransparent-selected: #f64e7e; /* [default: #d336364d] */
   --accent-color: #f65f8a; /* accent color (used in links, mentions etc.) [default: #fd9fa0] */
   --accent-color-semitransparent: #180c12; /* [default: #fca7a918] */
-  --accent-saturated: #9d6031; /* [default: #fd7a7c] */
+  --accent-saturated: #f94376; /* [default: #fd7a7c] */
   --accent-desaturated: #f54b7b; /* [default: #b47a7a] */
   --button-text: #dddddd; /* [default: #dddddd] */
   --button-text-selected: #ffffff; /* [default: #ffffff] */
@@ -1021,6 +1021,20 @@ nav[class*=container] > [class*=container] > header:hover {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
+
+/* 1) Скрываем панель активностей по умолчанию */
+[class*=panels] > [class*=activityPanel] {
+  width: 0 !important;           /* убираем ширину панели */
+  overflow: hidden !important;   /* скрываем содержимое */
+  transition: width 0.25s ease;  /* анимация разворачивания */
+}
+
+/* 2) При наведении на правый край контейнера panels «вытягиваем» панель на нужную ширину */
+[class*=panels]:hover > [class*=activityPanel] {
+  width: 260px !important;       /* пример: 260px — задайте ту ширину, которая вам нужна */
+}
+
+
 [class*=panels] > [class*=activityPanel], [class*=panels] > [class*=container] {
   border: 0;
 }
