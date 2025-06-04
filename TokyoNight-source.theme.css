@@ -17,7 +17,7 @@
 
   --profile-background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url("https://i.postimg.cc/bvcJKxJk/7e0b7d2a01b77f99f1eebc80f0b63ff78fd6bf2b60d9a5197133bca55c4391b2-1.png");
-  --main-color: #993753; /* main color (used mostly in buttons) [default: #992727] */
+  --main-color: #17a719; /* main color (used mostly in buttons) [default: #992727] */
   --main-color-selected: #d86182; /* [default: #aa2f2f] */
   --main-color-semitransparent: #fb4e7f; /* [default: #d4393926] */
   --main-color-semitransparent-selected: #f64e7e; /* [default: #d336364d] */
@@ -1023,7 +1023,6 @@ nav[class*=container] > [class*=container] > header:hover {
 }
 [class*=panels] > [class*=activityPanel], [class*=panels] > [class*=container] {
   border: 0;
-  width: 10px;
 }
 [class*=panels] > [class*=activityPanel] button:hover, [class*=panels] > [class*=container] button:hover {
   background: rgba(0, 0, 0, 0.2) !important;
