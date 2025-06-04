@@ -1022,16 +1022,16 @@ nav[class*=container] > [class*=container] > header:hover {
   border-radius: 10px;
 }
 
-/* 1) Скрываем панель активностей по умолчанию */
-[class*=panels] > [class*=activityPanel] {
-  width: 0 !important;           /* убираем ширину панели */
-  overflow: hidden !important;   /* скрываем содержимое */
-  transition: width 0.25s ease;  /* анимация разворачивания */
+/* Скрыть правую панель активности по умолчанию */
+.scroller__7d20c {
+  width: 0 !important;
+  overflow: hidden !important;
+  transition: width 0.25s ease;
 }
 
-/* 2) При наведении на правый край контейнера panels «вытягиваем» панель на нужную ширину */
-[class*=panels]:hover > [class*=activityPanel] {
-  width: 260px !important;       /* пример: 260px — задайте ту ширину, которая вам нужна */
+/* Показывать при наведении на родительский контейнер */
+.panels-3wFtMD:hover > .scroller__7d20c {
+  width: 260px !important;
 }
 
 
