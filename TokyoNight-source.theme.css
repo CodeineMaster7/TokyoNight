@@ -1022,17 +1022,20 @@ nav[class*=container] > [class*=container] > header:hover {
   border-radius: 10px;
 }
 
-/* Скрыть правую панель активности по умолчанию */
-.scroller__7d20c {
-  width: 0 !important;
-  overflow: hidden !important;
-  transition: width 0.25s ease;
+/* === 1) Скрываем секцию «Active Now» из-за высоты (max-height: 0) === */
+[class*="scrollerBase_"] {
+  max-height: 0 !important;       /* «свернём» блок, чтобы он не занимал места */
+  overflow: hidden !important;    /* спрячем всё, что внутри */
+  transition: max-height 0.25s ease; /* плавная анимация разворачивания */
+  pointer-events: none;           /* чтобы при свёрнутом состоянии курсор проходил сквозь */
 }
 
-/* Показывать при наведении на родительский контейнер */
-.panels-3wFtMD:hover > .scroller__7d20c {
-  width: 260px !important;
+/* === 2) При наведении на родительский контейнер — «разворачиваем» Active Now === */
+[class*="panels-"]:hover > [class*="scrollerBase_"] {
+  max-height: 1000px !important;  /* выставляем большую «максимальную высоту» для разворачивания */
+  pointer-events: auto;           /* вновь возвращаем возможность «зацепиться» мышью */
 }
+
 
 
 [class*=panels] > [class*=activityPanel], [class*=panels] > [class*=container] {
