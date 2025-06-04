@@ -1042,14 +1042,6 @@ nav[class*=container] > [class*=container] > header:hover {
 [class*=panels] > [class*=wrapper] > [class*=container] {
   border: 0;
 }
-[class*=panels] [class*=actionButtons] button {
-  background: var(--main-color-semitransparent) !important;
-  color: var(--button-text) !important;
-}
-[class*=panels] [class*=actionButtons] button:hover {
-  background: var(--main-color-semitransparent-selected) !important;
-  color: var(--button-text-selected) !important;
-}
 
 [class*=focusLock] [class*=modal] {
   background: rgba(0, 0, 0, 0.95) !important;
