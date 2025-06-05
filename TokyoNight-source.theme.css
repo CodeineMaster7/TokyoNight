@@ -1,8 +1,9 @@
 /**
 * @name Tokyo Night
 * @author codeinemaster
-* @description Tokyo Night theme with GTR car 2550x1440 background
+* @description Tokyo Night theme with GTR car 2550x1440 background optimizated
 * @version 2.2.8
+* @tg https://t.me/graylest
 */
 
 /*
@@ -10,7 +11,6 @@
 */
 
 :root {
-  /* СКОРЕЕ ВЕГО, DiscordPlus читает переменную --app-background при инициализации */
   --app-background: linear-gradient(
       rgba(0, 0, 0, 0.8),
       rgba(0, 0, 0, 0.8)
@@ -31,7 +31,6 @@
   --profile-activity: #dc6889;
 }
 
-/* Задаем фон прямо на корневой контейнер */
 html,
 body {
   background-image: var(--app-background) !important;
@@ -39,10 +38,8 @@ body {
   background-size: cover !important;
   background-position: center center !important;
   background-attachment: fixed !important;
-  /* УБРАЛИ transition, чтобы не было лишних анимаций */
 }
 
-/* Если где-то в DiscordPlus был директориюмодал со специальным фоном */
 [class*=directoryModal] {
   background-image: var(--app-background) !important;
   background-repeat: no-repeat !important;
@@ -50,7 +47,6 @@ body {
   background-position: center center !important;
 }
 
-/* Скрываем панель “Active Now” (друзья в голосовых и играх) */
 /* Скрыть блок Active Now полностью */
 .itemCard__7e549 {
   display: none !important;
@@ -60,8 +56,6 @@ body {
 .scroller__7d20c:hover .itemCard__7e549 {
   display: block !important;
 }
-
-
 
 [class^=appMount_],
 [class^=app_],
