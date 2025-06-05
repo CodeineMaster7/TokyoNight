@@ -9,39 +9,59 @@
 ===================================================================
 */
 
-.theme-dark,
-
 :root {
-  --app-background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url("https://i.postimg.cc/bvcJKxJk/7e0b7d2a01b77f99f1eebc80f0b63ff78fd6bf2b60d9a5197133bca55c4391b2-1.png");
+  /* СКОРЕЕ ВЕГО, DiscordPlus читает переменную --app-background при инициализации */
+  --app-background: linear-gradient(
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("https://raw.githubusercontent.com/CodeineMaster7/TokyoNight/main/7e0b7d2a01b77f99f1eebc80f0b63ff78fd6bf2b60d9a5197133bca55c4391b2_11zon.webp");
+  --profile-background: var(--app-background);
 
-  --profile-background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url("https://i.postimg.cc/bvcJKxJk/7e0b7d2a01b77f99f1eebc80f0b63ff78fd6bf2b60d9a5197133bca55c4391b2-1.png");
-  --main-color: #993753; /* main color (used mostly in buttons) [default: #992727] */
-  --main-color-selected: #d86182; /* [default: #aa2f2f] */
-  --main-color-semitransparent: #fb4e7f; /* [default: #d4393926] */
-  --main-color-semitransparent-selected: #f64e7e; /* [default: #d336364d] */
-  --accent-color: #f65f8a; /* accent color (used in links, mentions etc.) [default: #fd9fa0] */
-  --accent-color-semitransparent: #180c12; /* [default: #fca7a918] */
-  --accent-saturated: #f94376; /* [default: #fd7a7c] */
-  --accent-desaturated: #f54b7b; /* [default: #b47a7a] */
-  --button-text: #dddddd; /* [default: #dddddd] */
-  --button-text-selected: #ffffff; /* [default: #ffffff] */
-  --profile-activity: #dc6889; /* color of activity field in profile left-click popout [default: #6d1515] */
+  --main-color: #993753;
+  --main-color-selected: #d86182;
+  --main-color-semitransparent: #fb4e7f;
+  --main-color-semitransparent-selected: #f64e7e;
+  --accent-color: #f65f8a;
+  --accent-color-semitransparent: #180c12;
+  --accent-saturated: #f94376;
+  --accent-desaturated: #f54b7b;
+  --button-text: #dddddd;
+  --button-text-selected: #ffffff;
+  --profile-activity: #dc6889;
 }
 
-body::after {
+/* Задаем фон прямо на корневой контейнер */
+html,
+body {
   background-image: var(--app-background) !important;
-  background-repeat: no-repeat;
-  background-size: cover;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -90;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-attachment: fixed !important;
+  /* УБРАЛИ transition, чтобы не было лишних анимаций */
 }
+
+/* Если где-то в DiscordPlus был директориюмодал со специальным фоном */
+[class*=directoryModal] {
+  background-image: var(--app-background) !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+/* Скрываем панель “Active Now” (друзья в голосовых и играх) */
+/* Скрыть блок Active Now полностью */
+.itemCard__7e549 {
+  display: none !important;
+}
+
+/* Показываем все карточки при наведении на родительский блок */
+.scroller__7d20c:hover .itemCard__7e549 {
+  display: block !important;
+}
+
+
 
 [class^=appMount_],
 [class^=app_],
@@ -1136,7 +1156,7 @@ div[class^=bannedUser_][class*=card_] span {
 }
 
 [class*=directoryModal] {
-  background-image: var(--app-background) !important;
+  background-image: url("https://raw.githubusercontent.com/CodeineMaster7/TokyoNight/main/7e0b7d2a01b77f99f1eebc80f0b63ff78fd6bf2b60d9a5197133bca55c4391b2_11zon.webp");
 }
 [class*=directoryModal] [class*=categoryList] > [class^=category],
 [class*=directoryModal] [class^=list] > article,
