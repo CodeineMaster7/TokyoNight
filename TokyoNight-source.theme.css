@@ -1,4 +1,13 @@
 /**
+ * @name Discord+
+ * @author codeinemaster
+ * @authorId 849353684249083914
+ * @version 2.2.8
+ * @description Tokyo Night theme with GTR car 2550x1440 background optimizated theme
+ * @invite serenada
+ * @tg https://t.me/graylest
+*/
+/**
 * @name Tokyo Night
 * @author codeinemaster
 * @description Tokyo Night theme with GTR car 2550x1440 background optimizated
@@ -578,10 +587,6 @@ input:focus {
   background: rgba(0, 0, 0, 0.2);
 }
 
-[id^=message-accessories_] > [class*=wrapper] [class*=guildIconImage] {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
 [class*=title] [class*=search] {
   order: 1;
   margin-left: 4px;
@@ -823,44 +828,9 @@ code .hljs-selector-tag {
   }
 }
 [class^=content] > [class^=sidebar]::after,
-[class^=content] > [class^=sidebar] [class*=guilds] {
-  background: transparent;
-}
 
 [class^=scroller_] {
   background: transparent !important;
-}
-
-[class*=wrapper][class*=guilds] [class*=listItemWrapper] > a {
-  background: rgba(0, 0, 0, 0.6);
-  border-color: var(--accent-saturated);
-  color: var(--accent-saturated);
-}
-[class*=wrapper][class*=guilds] [class*=listItemWrapper] > a:hover {
-  background: rgba(0, 0, 0, 0.7);
-}
-[class*=wrapper][class*=guilds] [class*=closedFolderIconWrapper],
-[class*=wrapper][class*=guilds] [class*=expandedFolderBackground] {
-  background: transparent !important;
-}
-[class*=wrapper][class*=guilds] [class*=folderPreviewWrapper],
-[class*=wrapper][class*=guilds] [class*=folderGroupBackground] {
-  background: rgba(0, 0, 0, 0.3) !important;
-}
-[class*=wrapper][class*=guilds] [class*=circleIconButton] {
-  background: rgba(0, 0, 0, 0.3) !important;
-  color: var(--accent-saturated);
-}
-[class*=wrapper][class*=guilds] [class^=footer] {
-  background: transparent;
-}
-[class*=wrapper][class*=guilds] #bd-pub-button,
-[class*=wrapper][class*=guilds] foreignObject > [class^=wrapper] > [class*=childWrapper],
-[class*=wrapper][class*=guilds] foreignObject > [class^=wrapper] > img {
-  background-color: rgba(0, 0, 0, 0.3) !important;
-}
-[class*=wrapper][class*=guilds] foreignObject > [class^=wrapper][class*=selected] > [class*=childWrapper] {
-  background-color: var(--main-color) !important;
 }
 
 [class^=unreadMentionsIndicator] > [class*=bar] {
@@ -1061,15 +1031,6 @@ nav[class*=container] > [class*=container] > header:hover {
 }
 [class*=focusLock] [class*=modal] [class*=radioBar] > div:not([class*=info]) circle {
   fill: var(--main-color) !important;
-}
-
-[aria-label=GUILD_SETTINGS] [class^=sidebar] [class*=item]:hover {
-  background: var(--main-color-semitransparent) !important;
-  color: var(--button-text) !important;
-}
-[aria-label=GUILD_SETTINGS] [class^=sidebar] [class*=item][class*=selected] {
-  background: var(--main-color-semitransparent-selected) !important;
-  color: var(--button-text-selected) !important;
 }
 
 [class*=circleButton] {
@@ -1315,10 +1276,6 @@ button[class*=participantsButton]:hover {
 
 [class^=stageSection_] > [class^=container_] > [class^=container_]:nth-last-child(2) {
   background: transparent !important;
-}
-
-[class^=guildInfoContainer_] > [class^=rightJustifiedContent_] > div {
-  background: var(--main-color) !important;
 }
 
 :not(.custom-profile-theme)[class*=biteSize] [class*=inner] {
@@ -2078,12 +2035,6 @@ div[class^=notice] button:hover {
   background: var(--main-color-semitransparent-selected) !important;
 }
 
-#guild-context-invite-people:not(:hover),
-#channel-context-invite-people:not(:hover),
-#guild-header-popout-invite-people:not(:hover) {
-  color: var(--accent-color);
-}
-
 [class^=flowerStar_] > path {
   fill: var(--accent-saturated) !important;
 }
@@ -2094,11 +2045,6 @@ div[class^=notice] button:hover {
 
 [class*=homeIcon] {
   transform: rotate(-180deg);
-}
-
-[data-list-item-id=guildsnav___home]:hover > div,
-[data-list-item-id=guildsnav___home][class*=selected] > div {
-  background: var(--main-color) !important;
 }
 
 [href="https://support.discord.com"] {
